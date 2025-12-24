@@ -2,156 +2,297 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Nagelstudio Ling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagel studio Ling</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #fff5f8;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff7f9;
             color: #333;
         }
+
         header {
-            background-color: #f4a6c1;
-            padding: 30px;
+            background: linear-gradient(120deg, #f7b2c4, #fce1e8);
+            padding: 80px 20px;
             text-align: center;
-            color: white;
         }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
         nav {
-            background-color: #ffd6e5;
-            padding: 10px;
+            background: #ffffff;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
+            color: #c04b6a;
+            font-weight: 600;
         }
+
         section {
-            padding: 40px;
-            max-width: 900px;
+            padding: 60px 20px;
+            max-width: 1100px;
             margin: auto;
         }
+
         h2 {
-            color: #d94c7d;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #c04b6a;
         }
+
+        .about, .services, .reviews {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.05em;
+        }
+
         .services ul {
             list-style: none;
             padding: 0;
         }
+
         .services li {
-            background: white;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 10px 0;
         }
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
-        input, select, textarea, button {
+
+        .gallery img {
             width: 100%;
-            padding: 10px;
-            margin-top: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
         }
-        button {
-            background-color: #f4a6c1;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+
+        .gallery img:hover {
+            transform: scale(1.05);
         }
-        footer {
-            background-color: #ffd6e5;
-            text-align: center;
+
+        .reviews blockquote {
+            background: #ffffff;
             padding: 20px;
-            margin-top: 40px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
+
+        footer {
+            background: #f7b2c4;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #c04b6a;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+.booking-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.booking-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.booking-form button {
+    background: #25D366; /* WhatsApp绿色 */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.booking-form button:hover {
+    background: #128C7E; /* WhatsApp深绿色 */
+}
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Nagelstudio Ling</h1>
-    <p>Professionele nagelverzorging met liefde en precisie</p >
+    <h1>Nagel studio Ling</h1>
+    <p>Professionele nagelverzorging met stijl & passie</p>
+    <a href="#contact" class="btn">Boek Nu</a>
 </header>
 
 <nav>
-    Home
-    Diensten
-    Over ons
-    Afspraak maken
-    Contact
+    <a href="#about">Over Ons</a>
+    <a href="#services">Diensten</a>
+    <a href="#gallery">Galerij</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-    <h2>Welkom bij Nagelstudio Ling</h2>
-    <p>
-        Bij Nagelstudio Ling zorgen wij voor mooie, verzorgde nagels in een
-        rustige en hygiënische omgeving. Jouw tevredenheid staat bij ons centraal.
-    </p >
+<section id="about">
+    <h2>Over Nagel studio Ling</h2>
+    <div class="about">
+        <p>
+            Welkom bij <strong>Nagel studio Ling</strong>!  
+            Wij bieden professionele nagelbehandelingen in een ontspannen en hygiënische omgeving.
+            Met oog voor detail en persoonlijke aandacht zorgen wij ervoor dat jouw nagels perfect
+            passen bij jouw stijl.
+
+        <p>		
+Ons locatie
+Walenburg 10, 2402KA, Alphen aan den Rijn
+
+        </p>
+    </div>
 </section>
 
-<section id="diensten" class="services">
+<section id="services">
     <h2>Onze Diensten</h2>
-    <ul>
-        <li>💅 Manicure</li>
-        <li>💅 Gellak</li>
-        <li>💅 Acrylnagels</li>
-        <li>💅 Nail art</li>
-        <li>💅 Nagelreparatie</li>
-    </ul>
+    <div class="services">
+        <ul>
+            <li>💅 Manicure & Nagelverzorging</li>
+            <li>✨ Gellak / Gel Polish</li>
+            <li>💎 BIAB & Acryl nagels</li>
+            <li>🎨 Nail Art & Custom Designs</li>
+            <li>🌸 Nagelverlenging</li>
+        </ul>
+    </div>
 </section>
 
-<section id="over">
-    <h2>Over Nagelstudio Ling</h2>
-    <p>
-        Nagelstudio Ling is een professionele nagelsalon met passie voor schoonheid.
-        Wij werken met hoogwaardige producten en volgen de nieuwste trends.
-    </p >
+<section id="gallery">
+    <h2>Nagel Galerij</h2>
+    <div class="gallery">
+        <img src="https://kawaiibabe.com/cdn/shop/files/clear-neutral-tone-press-nails-false-press-on-beauty-fake-nails-547_700x.jpg?v=1724892432/600x600/?nails,manicure" alt="Nagels">
+        <img src="https://kawaiibabe.com/cdn/shop/files/clear-neutral-tone-press-nails-false-press-on-beauty-fake-nails-436_700x.jpg?v=1724892353/600x600/?gelnails" alt="Gelnagels">
+        <img src="https://kawaiibabe.com/cdn/shop/files/clear-neutral-tone-press-nails-false-press-on-beauty-fake-nails-763_700x.jpg?v=1724892365/600x600/?nailart" alt="Nail art">
+        <img src="https://kawaiibabe.com/cdn/shop/files/clear-neutral-tone-press-nails-false-press-on-beauty-fake-nails-117_700x.jpg?v=1724892371/600x600/?acrylicnails" alt="Acryl nagels">
+        <img src="https://kawaiibabe.com/cdn/shop/files/clear-neutral-tone-press-nails-false-press-on-beauty-fake-nails-882_700x.jpg?v=1724892553/600x600/?frenchmanicure" alt="French manicure">
+        <img src="https://kawaiibabe.com/cdn/shop/files/clear-neutral-tone-press-nails-false-press-on-beauty-fake-nails-397_8393e973-b8ab-41a6-b973-57348f3c38ba_700x.jpg?v=1724892479/600x600/?naildesign" alt="Nagel design">
+    </div>
 </section>
 
-<section id="afspraak">
-    <h2>Afspraak maken</h2>
-    <form action="mailto:example@email.com" method="post" enctype="text/plain">
-        <label>Naam</label>
-        <input type="text" name="Naam" required>
-
-        <label>E-mail</label>
-        <input type="email" name="Email" required>
-
-        <label>Telefoonnummer</label>
-        <input type="tel" name="Telefoon">
-
-        <label>Kies een behandeling</label>
-        <select name="Behandeling">
-            <option>Manicure</option>
-            <option>Gellak</option>
-            <option>Acrylnagels</option>
-            <option>Nail art</option>
-        </select>
-
-        <label>Gewenste datum</label>
-        <input type="date" name="Datum" required>
-
-        <label>Opmerkingen</label>
-        <textarea name="Opmerkingen"></textarea>
-
-        <button type="submit">Afspraak aanvragen</button>
-    </form>
+<section id="reviews">
+    <h2>Klantreviews</h2>
+    <div class="reviews">
+        <blockquote>
+            “Mijn nagels zijn altijd perfect! Super vriendelijke service.”
+        </blockquote>
+        <blockquote>
+            “Professioneel, hygiënisch en prachtige designs. Zeker een aanrader!”
+        </blockquote>
+        <blockquote>
+            “Ik kom hier elke maand en ben altijd tevreden.”
+        </blockquote>
+    </div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>📍 Plaats: Walenburg 10, 2402KA, Alphen aan den Rijn</p >
-    <p>📞 Telefoon: 06-37020695</p >
-    <p>📧 E-mail: info@nagelstudioling.nl</p >
+    <h2>Online Afspraak Maken via WhatsApp</h2>
+
+    <form class="booking-form" onsubmit="sendWhatsApp(event)">
+        <input type="text" id="name" placeholder="Naam" required>
+        <input type="tel" id="phone" placeholder="Telefoonnummer" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+
+        <select id="service" required>
+            <option value="">Kies een behandeling</option>
+            <option>Manicure & Nagelverzorging</option>
+            <option>Gellak</option>
+            <option>BIAB / Acryl nagels</option>
+            <option>Nail Art</option>
+            <option>Nagelverlenging</option>
+        </select>
+
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+
+        <textarea id="message" placeholder="Opmerkingen (optioneel)"></textarea>
+
+        <button type="submit">Afspraak Boeken via WhatsApp</button>
+    </form>
 </section>
+<script>
+function sendWhatsApp(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const message = document.getElementById("message").value;
+
+    // WhatsApp URL 格式
+    const whatsappNumber = "+31637020695"; // 替换为你的 WhatsApp 电话号码（包含国际区号）
+
+    const text = `
+Afspraak aanvraag%0A
+Naam: ${name}%0A
+Telefoon: ${phone}%0A
+Email: ${email}%0A
+Behandeling: ${service}%0A
+Datum: ${date}%0A
+Tijd: ${time}%0A
+Opmerking: ${message}
+`;
+
+    // 使用 WhatsApp URL
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    // 打开 WhatsApp
+    window.location.href = whatsappLink;
+}
+</script>
+
+
 
 <footer>
-    <p>© 2025 Nagelstudio Ling</p >
+    <p>© 2025 Nagel studio Ling</p>
+    <p>Alle rechten voorbehouden</p>
 </footer>
 
 </body>
